@@ -1,5 +1,14 @@
 .App {
   text-align: center;
+  background-color: #282c34;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
 .App-logo {
@@ -35,4 +44,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+.breakingline {
+  /* background-color: red; */
+  /* color: red; */
+  width: 70%;
+  border: 2px solid red;
+  margin-bottom: 100px;
 }

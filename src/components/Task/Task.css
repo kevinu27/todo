@@ -1,0 +1,66 @@
+.taskCard {
+  background-color: white;
+  border: 2px solid red;
+  border-radius: 25px;
+  color: #282c34;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1%;
+  padding-bottom: 4%;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin: 0.5%;
+}
+
+.date {
+  display: flex;
+  font-size: 20px;
+  padding-left: 5%;
+  margin-bottom: 2px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  align-items: flex-start;
+}
+
+.date p {
+  padding-left: 5%;
+  margin-bottom: 2px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.title {
+  font-weight: bold;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  min-width: 100%;
+}
+
+.taskName {
+  display: flex;
+  /* padding-left: 5%; */
+  font-size: 20px;
+  align-items: flex-start;
+}
+
+.taskName p {
+  /* padding-left: 5%; */
+  /* margin-bottom: 2px; */
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.closingButton {
+  border-radius: 50%;
+  box-shadow: none;
+  border: none;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.actualDate {
+  min-width: max-content;
+}

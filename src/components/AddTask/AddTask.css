@@ -1,0 +1,27 @@
+.AddtaskCard {
+  background-color: white;
+  border: 2px solid red;
+  border-radius: 25px;
+  color: #282c34;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-bottom: 40px;
+  margin-top: 10%;
+}
+
+button {
+  background-color: #282c34;
+  color: white;
+  border-radius: 10px;
+  min-width: 20%;
+}
+
+input[value] {
+  /* color: rgb(133, 128, 128); */
+  font-size: 15px;
+}
