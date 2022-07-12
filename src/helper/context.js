@@ -4,18 +4,25 @@ import React, { useState, useContext, createContext } from "react";
 // export const TasksContext = createContext({});
 // export const datesContext = createContext({});
 
-export const context = createContext();
+export const TaskDateContext = createContext({
+  task: "",
+  setTask: () => {},
+  tasks: [],
+  setTasks: () => {},
+  date: "",
+  setDate: () => {},
+});
 
-const contextProvider = (props) => {
-  const [task, setTask] = useState("");
-  const [date, setDate] = useState("");
-  const [tasks, setTasks] = useState("");
+// const contextProvider = (props) => {
+//   const [task, setTask] = useState("");
+//   const [date, setDate] = useState("");
+//   const [tasks, setTasks] = useState("");
 
-  return (
-    <context.Provider value={{ task, setTask, date, setDate, tasks, setTasks }}>
-      {props.children}
-    </context.Provider>
-  );
-};
+//   return (
+//     <context.Provider value={{ task, setTask, date, setDate, tasks, setTasks }}>
+//       {props.children}
+//     </context.Provider>
+//   );
+// };
 
-export default contextProvider;
+// export default contextProvider;

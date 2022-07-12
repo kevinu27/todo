@@ -1,13 +1,12 @@
 import React, { useContext, useState } from "react";
 import "./AddTask.css";
 import uniqid from "uniqid";
-import { context } from "../../helper/context";
+import { TaskDateContext } from "../../helper/context";
 
 export function AddTask(props) {
   // const [task, setTask] = useState("");
   // const [date, setDate] = useState("");
-  const { task, setTask } = React.useContext(context);
-  const { date, setDate } = React.useContext(context);
+  const { task, setTask, date, setDate } = React.useContext(TaskDateContext);
 
   const addingTask = (e) => {
     console.log(e.target.value);
