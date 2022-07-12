@@ -1,17 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./AddTask.css";
 import uniqid from "uniqid";
-import { useDispatch } from "react-redux";
-import { addingTask2 } from "../features/tasks";
-import { useSelector } from "react-redux";
+import { context } from "../../helper/context";
 
 export function AddTask(props) {
-  const dispatch = useDispatch();
-  const taskRedux2 = useSelector((state) => state.tasks.value);
-  const [task, setTask] = useState("");
-  const [date, setDate] = useState("");
+  // const [task, setTask] = useState("");
+  // const [date, setDate] = useState("");
+  const { task, setTask } = React.useContext(context);
+  const { date, setDate } = React.useContext(context);
 
   const addingTask = (e) => {
+    console.log(e.target.value);
     setTask(e.target.value);
     console.log(task);
   };
@@ -21,7 +20,7 @@ export function AddTask(props) {
     console.log(date);
   };
 
-  const taskRedux = useSelector((state) => state.tasks.value);
+  // const taskRedux = useSelector((state) => state.tasks.value);
 
   const addingTasks = (e) => {
     // console.log("props.tasks", props.tasks);
@@ -35,19 +34,15 @@ export function AddTask(props) {
         id: uniqid(),
       },
     ]);
-
     setTask("");
-    dispatch(
-      addingTask2({
-        taskName: task,
-        creationDate: new Date(),
-        dueTo: date,
-        id: uniqid(),
-      })
-    );
-
-    console.log("taskRedux al añadir task", taskRedux2);
   };
+
+  // addingTask({
+  //   taskName: task,
+  //   creationDate: new Date(),
+  //   dueTo: date,
+  //   id: uniqid(),
+  // });
 
   return (
     <>

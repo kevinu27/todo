@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./Task.css";
+import { TaskContext } from "../../helper/context";
 
-import { removingTask2 } from "../features/tasks";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+// import { removingTask2 } from "../features/tasks";
+// import { useSelector } from "react-redux";
+// import { useDispatch } from "react-redux";
 
 export function Task(props) {
-  const dispatch = useDispatch();
   const removeTask = (e) => {
     // console.log("id de las props", props.id);
     const newTasks = props.tasks.filter((elm) => {
@@ -16,18 +16,16 @@ export function Task(props) {
     props.setTasks(newTasks);
   };
 
-  const removeTask2 = (e) => {
-    console.log("id de las props", props.id);
-    dispatch(
-      removingTask2({
-        // taskName: task,
-        // creationDate: new Date(),
-        // dueTo: date,
-        // id: uniqid(),
-        id: props.id,
-      })
-    );
-  };
+  // const removeTask2 = (e) => {
+  //   console.log("id de las props", props.id);
+  //   removingTask({
+  //     // taskName: task,
+  //     // creationDate: new Date(),
+  //     // dueTo: date,
+  //     // id: uniqid(),
+  //     id: props.id,
+  //   });
+  // };
 
   return (
     <>
@@ -52,7 +50,7 @@ export function Task(props) {
           {/* <button className="closingButton" onClick={removeTask}>
             X
           </button> */}
-          <button className="closingButton" onClick={(e) => removeTask2(e)}>
+          <button className="closingButton" onClick={(e) => removeTask(e)}>
             X
           </button>
         </div>
