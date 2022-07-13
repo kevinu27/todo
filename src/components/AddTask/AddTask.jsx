@@ -6,7 +6,9 @@ import { TaskDateContext } from "../../helper/context";
 export function AddTask(props) {
   // const [task, setTask] = useState("");
   // const [date, setDate] = useState("");
-  const { task, setTask, date, setDate } = React.useContext(TaskDateContext);
+  const { tasks, setTasks, task, setTask, date, setDate } = React.useContext(
+    TaskDateContext
+  );
 
   const addingTask = (e) => {
     console.log(e.target.value);
@@ -23,8 +25,8 @@ export function AddTask(props) {
 
   const addingTasks = (e) => {
     // console.log("props.tasks", props.tasks);
-    const tasksCopy = props.tasks;
-    props.setTasks([
+    const tasksCopy = tasks;
+    setTasks([
       ...tasksCopy,
       {
         taskName: task,
