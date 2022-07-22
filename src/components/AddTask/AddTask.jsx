@@ -4,11 +4,16 @@ import uniqid from "uniqid";
 import { TaskDateContext } from "../../helper/context";
 
 export function AddTask(props) {
-  // const [task, setTask] = useState("");
-  // const [date, setDate] = useState("");
-  const { tasks, setTasks, task, setTask, date, setDate } = React.useContext(
-    TaskDateContext
-  );
+  const {
+    tasks,
+    setTasks,
+    task,
+    setTask,
+    date,
+    setDate,
+    deathline,
+    setDeathline,
+  } = React.useContext(TaskDateContext);
 
   const addingTask = (e) => {
     console.log(e.target.value);
@@ -21,10 +26,7 @@ export function AddTask(props) {
     console.log(date);
   };
 
-  // const taskRedux = useSelector((state) => state.tasks.value);
-
   const addingTasks = (e) => {
-    // console.log("props.tasks", props.tasks);
     const tasksCopy = tasks;
     setTasks([
       ...tasksCopy,
@@ -37,13 +39,6 @@ export function AddTask(props) {
     ]);
     setTask("");
   };
-
-  // addingTask({
-  //   taskName: task,
-  //   creationDate: new Date(),
-  //   dueTo: date,
-  //   id: uniqid(),
-  // });
 
   return (
     <>

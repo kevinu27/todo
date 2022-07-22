@@ -1,31 +1,27 @@
 import React, { useState } from "react";
 import "./Task.css";
 import { TaskContext } from "../../helper/context";
-
-// import { removingTask2 } from "../features/tasks";
-// import { useSelector } from "react-redux";
-// import { useDispatch } from "react-redux";
+import { TaskDateContext } from "../../helper/context";
 
 export function Task(props) {
+  const {
+    tasks,
+    setTasks,
+    task,
+    setTask,
+    date,
+    setDate,
+    deathline,
+    setDeathline,
+  } = React.useContext(TaskDateContext);
+
   const removeTask = (e) => {
-    // console.log("id de las props", props.id);
-    const newTasks = props.tasks.filter((elm) => {
+    const newTasks = tasks.filter((elm) => {
       return elm.id !== props.id;
     });
     console.log("newTasks", newTasks);
-    props.setTasks(newTasks);
+    setTasks(newTasks);
   };
-
-  // const removeTask2 = (e) => {
-  //   console.log("id de las props", props.id);
-  //   removingTask({
-  //     // taskName: task,
-  //     // creationDate: new Date(),
-  //     // dueTo: date,
-  //     // id: uniqid(),
-  //     id: props.id,
-  //   });
-  // };
 
   return (
     <>
@@ -47,9 +43,6 @@ export function Task(props) {
           </div>
         </div>
         <div>
-          {/* <button className="closingButton" onClick={removeTask}>
-            X
-          </button> */}
           <button className="closingButton" onClick={(e) => removeTask(e)}>
             X
           </button>
