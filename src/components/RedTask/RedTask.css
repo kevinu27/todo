@@ -1,5 +1,5 @@
-.taskCard {
-  background-color: green;
+.REDtaskCard {
+  background-color: red;
   border: 2px solid red;
   border-radius: 25px;
   color: #282c34;
@@ -12,7 +12,20 @@
   padding-right: 2%;
   margin: 0.5%;
 }
-
+.taskCardRed {
+  background-color: red;
+  border: 2px solid red;
+  border-radius: 25px;
+  color: #282c34;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1%;
+  padding-bottom: 4%;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin: 0.5%;
+}
 
 .date {
   display: flex;

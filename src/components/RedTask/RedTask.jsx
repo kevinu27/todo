@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./Task.css";
+import "./RedTask.css";
 import { TaskContext } from "../../helper/context";
 import { TaskDateContext } from "../../helper/context";
 
-export function Task(props) {
+export function RedTask(props) {
   const {
     tasks,
     setTasks,
@@ -25,7 +25,8 @@ export function Task(props) {
 
   return (
     <>
-      <div className='taskCard' >
+      <div className='REDtaskCard
+'>
         <div>
           <div className="date">
             <p className="title">Added at: </p>
